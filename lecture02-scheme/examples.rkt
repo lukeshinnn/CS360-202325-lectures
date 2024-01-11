@@ -20,7 +20,10 @@
 ;
 
 (define (length xs)
-  'not-implemented)
+  (if (null? xs)
+    0
+    (+ 1 (length (rest xs) )
+)))
 
 ; List-of-numbers -> Number
 ;
@@ -30,7 +33,10 @@
 ;   (sum '(1 2 3 4)) => 10
 
 (define (sum xs)
-  'not-implemented)
+  (if (null? xs)
+    0
+    (+ (first xs) (sum (rest xs) )
+)))
 
 ; List Integer -> Any
 ;
@@ -60,7 +66,9 @@
 ;
 
 (define (concat xs ys)
-  'not-implemented)
+  (if (null? xs)
+    ys
+    (cons (first xs) (concat (rest xs) ys))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Higher Order Function Examples
